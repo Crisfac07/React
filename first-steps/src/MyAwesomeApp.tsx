@@ -1,4 +1,12 @@
+import { CSSProperties } from "react";
+
 export function MyAwesomeApp(){
+    const myStyles : CSSProperties = {
+        backgroundColor: '#FAFAFA',
+        borderRadius :  20,
+        padding : 10,
+        marginTop: 30
+    };
     const firstName = "Cris";
     const lastName = "Franco";
     const favoriteGames = ['Elden Ring', 'smash', 'Metal Gear'];
@@ -16,7 +24,7 @@ export function MyAwesomeApp(){
 
         <p>{1+1}</p>
 
-        <h3>{favoriteGames.join(',')}</h3>
+        <h3 style={myStyles}>{favoriteGames.join(',')}</h3>
         <h2>{isActive? 'Active': 'Inactive'}</h2>
         <h3>{JSON.stringify(address)}</h3>
 
